@@ -147,3 +147,30 @@ modalCloses.forEach((close) => {
         modalContact.classList.remove('active-modal')
     })
 })
+
+/*=============== SEND EMAIL ===============*/
+const formContact = document.querySelector('.contact_form')
+
+$(document).ready((event) => {
+    $(formContact).submit((event) => {
+        event.preventDefault()
+
+        const name = $('#input-name').val()
+        const email = $('#input-email').val()
+        const message = $('#input-message').val()
+
+        $.ajax({
+            url: '/send',
+            type: 'POST',
+            data: { name: name, email: email, message: message },
+            success: () => {
+                document.body.classList.add('modal-active-body')
+                modalContact.classList.add('active-modal')
+
+                $('#input-name').val('')
+                $('#input-email').val('')
+                $('#input-message').val('')
+            }
+        })
+    })
+})

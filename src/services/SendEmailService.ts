@@ -15,6 +15,6 @@ export class SendEmailService {
         const mailer = new Mailer()
         const resultMailer = await mailer.execute(contentEmail)
 
-        return res.redirect('/?status=enviado')
+        return res.redirect('/')
     }
 }

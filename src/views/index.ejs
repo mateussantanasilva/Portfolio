@@ -544,7 +544,7 @@
                 <div class="contact_content">
                     <h3 class="contact_title">Envie-me um e-mail</h3>
 
-                    <form action="/send" method="post" class="contact_form">
+                    <form action="" method="post" class="contact_form" ajax="true" t>
                         <div class="contact_form-div">
                             <label for="input-name" class="contact_form-tag">Nome</label>
                             <input type="text" placeholder="Insira seu nome" name="name" id="input-name"
@@ -622,19 +622,11 @@
     <!--=============== SWIPER JS ===============-->
     <script src="./js/swiper-bundle.min.js"></script>
 
+    <!--=============== JQUERY ===============-->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
-
-    <!--=============== CONFIRMAÇÃO DO ENVIO DE EMAIL ===============-->
-    <script>
-        if ('<%= status %>' == 'enviado') {
-            setTimeout(() => {
-                document.body.classList.add('modal-active-body')
-                modalContact.classList.add('active-modal')
-            }, 1500)
-        }
-    </script>
-
 </body>
 
 </html>
