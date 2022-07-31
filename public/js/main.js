@@ -150,7 +150,6 @@ modalCloses.forEach((close) => {
 
 /*=============== SEND EMAIL ===============*/
 const formContact = document.querySelector('.contact_form')
-const spinnerLoading = document.querySelector('.spinner_loading')
 
 $(document).ready((event) => {
     $(formContact).submit((event) => {

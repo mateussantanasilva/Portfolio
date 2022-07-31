@@ -948,6 +948,12 @@ body.light-theme {
   left: 50%;
 }
 
+.spinner_loading.preloading {
+  background-color: var(--body-color);
+  overflow: overlay;
+  z-index: var(--z-modal);
+}
+
 .active-loading {
   opacity: 1;
   visibility: visible;
