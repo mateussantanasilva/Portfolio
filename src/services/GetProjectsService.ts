@@ -10,7 +10,6 @@ export class GetProjectsService {
 
         await axios.get(url)
             .then(response => {
-                const numberProjects = response.data.length
                 const resultRepositories = response.data
 
                 let namesProjects: Array<string> = []
@@ -33,8 +32,8 @@ export class GetProjectsService {
                 }
 
                 (async function prepareProjects() {
-                    const filterProjectsService = await new FilterProjectsService()
-                    const getProjectsUrlsService = await new GetProjectsUrlsService()
+                    const filterProjectsService = new FilterProjectsService()
+                    const getProjectsUrlsService = new GetProjectsUrlsService()
 
                     const resultFilters = await filterProjectsService.execute(
                         namesProjects,

@@ -150,10 +150,12 @@ modalCloses.forEach((close) => {
 
 /*=============== SEND EMAIL ===============*/
 const formContact = document.querySelector('.contact_form')
+const spinnerLoading = document.querySelector('.spinner_loading')
 
 $(document).ready((event) => {
     $(formContact).submit((event) => {
         event.preventDefault()
+        spinnerLoading.classList.add('active-loading')
 
         const name = $('#input-name').val()
         const email = $('#input-email').val()
@@ -164,6 +166,7 @@ $(document).ready((event) => {
             type: 'POST',
             data: { name: name, email: email, message: message },
             success: () => {
+                spinnerLoading.classList.remove('active-loading')
                 document.body.classList.add('modal-active-body')
                 modalContact.classList.add('active-modal')
 

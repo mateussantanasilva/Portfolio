@@ -13,7 +13,6 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
-
     return res.json({
         status: 'Error',
         message: 'error.message'
