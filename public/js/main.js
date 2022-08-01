@@ -13,26 +13,37 @@ const sr = ScrollReveal({
     delay: 300
 })
 
+// Delay da home após pre loading
 sr.reveal(`
-    .home_data,
+    .home_data
+`, { delay: 900 })
+
+sr.reveal(`
+    .home_handle
+`, { delay: 1400 })
+
+sr.reveal(`
+    .home_social, .home_scroll
+`, { delay: 1600, origin: 'bottom' })
+
+// Restante da página
+sr.reveal(`
     .section_subtitle
 `)
 
 sr.reveal(`
-    .home_handle,
     .section_title,
     .footer_title
 `, { delay: 500 })
 
 sr.reveal(`
-    .home_social, .home_scroll,
     .footer_copy 
 `, { delay: 700, origin: 'bottom' })
 
 sr.reveal(`
     .about_container,
-    .skills_container,
-    .services_container,
+    .skills_content,
+    .services_card,
     .work_container,
     .contact_container,
     .footer_list, .footer_social
