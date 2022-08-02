@@ -43,7 +43,7 @@ sr.reveal(`
 sr.reveal(`
     .about_container,
     .skills_content,
-    .services_card,
+    .services_container,
     .work_container,
     .contact_container,
     .footer_list, .footer_social
