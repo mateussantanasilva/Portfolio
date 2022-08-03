@@ -31,7 +31,7 @@ export class GenerateInitialDataProjectsService {
                     projects.push({
                         name: resultRepositories[i].name,
                         description: resultRepositories[i].description,
-                        urlFrontCover: `https://github.com/${process.env.USER_AGENT}/${resultRepositories[i].name}/blob/main/.github/front-cover.png?raw=true`,
+                        urlFrontCover: `https://github.com/${process.env.USER_AGENT}/${resultRepositories[i].name}/blob/main/.github/front-cover.webp?raw=true`,
                         urlRepositorie: resultRepositories[i].html_url,
                         urlAccommodation: resultRepositories[i].homepage,
                     })
