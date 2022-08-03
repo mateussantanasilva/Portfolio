@@ -48,3 +48,10 @@ $ npm run dev
 # O servidor será inicializado e poderá ser acessado por: <http://localhost:3000>
 # Caso a porta esteja ocupada, vá até src/server.ts e altere a porta para uma livre.
 ```
+#### Variáveis locais
+No arquivo .env, será necessário possuir as seguintes informações:
+- CLIENT_ID
+- SECRET_KEY
+- REFRESH_TOKEN
+- USER_AGENT
+- TOKEN_USER_GITHUB

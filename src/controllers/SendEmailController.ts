@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { Mailer } from '../modules/Mailer'
 
-export class SendEmailService {
+export class SendEmailController {
     async handle(req: Request, res: Response) {
 
         type TContentEmail = {

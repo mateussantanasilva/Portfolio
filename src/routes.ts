@@ -1,14 +1,13 @@
 import { Router } from 'express'
-import { GetProjectsService } from './services/GetProjectsService'
-import { SendEmailService } from './services/SendEmailService'
+import { GetProjectsController } from './controllers/GetProjectsController'
+import { SendEmailController } from './controllers/SendEmailController'
 
 const router = Router()
 
-const getProject = new GetProjectsService()
-const sendEmail = new SendEmailService()
+const getProject = new GetProjectsController()
+const sendEmail = new SendEmailController()
 
-// router.get('/', (req, res) => res.render('index'))
-router.get('/', (req, res) => res.render('index'))
+router.get('/', getProject.handle)
 router.post('/send', sendEmail.handle)
 
 export { router }

@@ -664,6 +664,9 @@ body.light-theme {
 
 /*=============== WORK ===============*/
 .work_card {
+  display: flex;
+  flex-direction: column;
+
   background-color: var(--container-color);
   border-radius: 1.5rem;
 
@@ -686,6 +689,7 @@ body.light-theme {
 
 .work_description {
   font-size: var(--small-font-size);
+  flex: 1;
 }
 
 .work_buttons {
@@ -1071,6 +1075,10 @@ body.light-theme {
   .services_container {
     grid-template-columns: repeat(2, 250px);
     column-gap: 3rem;
+  }
+
+  .work_buttons {
+    place-content: initial;
   }
 
   .contact_container {

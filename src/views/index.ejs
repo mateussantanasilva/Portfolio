@@ -462,97 +462,35 @@
 
             <div class="work_container container grid swiper">
                 <div class="swiper-wrapper">
-                    <div class="work_card swiper-slide">
-                        <img src="https://github.com/mateussantanasilva/DoctorCare/blob/main/.github/front-cover.png?raw=true"
-                            alt="" class="work_img">
+                    <% projects.forEach(project=> { %>
 
-                        <h3 class="work_name">DoctorCare</h3>
-                        <p class="work_description">
-                            Projeto de uma página institucional no formato one page sobre um centro de atendimento
-                            médico.
-                        </p>
+                        <div class="work_card swiper-slide">
+                            <img src="<%=project.urlFrontCover%>" alt="" class="work_img"
+                                onerror="this.src='./img/front-cover-error.png'">
 
-                        <div class="work_buttons">
-                            <a download="Mateus_CV" href="https://mateussantanasilva.github.io/DoctorCare/"
-                                target="_blank" class="button button--ghost">
-                                <i class='bx bx-globe work_buttons-icon'></i>
-                                Site
-                            </a>
-                            <a href="https://github.com/mateussantanasilva/DoctorCare" target="_blank" class="button">
-                                <i class='bx bxl-github work_buttons-icon'></i>
-                                Repositório
-                            </a>
+                            <h3 class="work_name">
+                                <%=project.name%>
+                            </h3>
+                            <p class="work_description">
+                                <%=project.description%>
+                            </p>
+
+                            <div class="work_buttons">
+                                <%if (project.urlAccommodation) {%>
+                                    <a download="Mateus_CV" href="<%=project.urlAccommodation%>" target="_blank"
+                                        class="button button--ghost">
+                                        <i class='bx bx-globe work_buttons-icon'></i>
+                                        Site
+                                    </a>
+                                    <% } %>
+                                <a href="<%=project.urlRepositorie%>" target="_blank" class="button">
+                                    <i class='bx bxl-github work_buttons-icon'></i>
+                                    Repositório
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="work_card swiper-slide">
-                        <img src="https://github.com/mateussantanasilva/CampIn/blob/main/.github/front-cover.png?raw=true"
-                            alt="" class="work_img">
-
-                        <h3 class="work_name">CampIn</h3>
-                        <p class="work_description">
-                            Projeto que utiliza node permitindo realizar o cadastro, login e recuperação de senha de um
-                            usuário.
-                        </p>
-
-                        <div class="work_buttons">
-                            <a download="Mateus_CV" href="https://camp-in-register.herokuapp.com/" target="_blank"
-                                class="button button--ghost">
-                                <i class='bx bx-globe work_buttons-icon'></i>
-                                Site
-                            </a>
-                            <a href="https://github.com/mateussantanasilva/CampIn" target="_blank" class="button">
-                                <i class='bx bxl-github work_buttons-icon'></i>
-                                Repositório
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="work_card swiper-slide">
-                        <img src="https://github.com/mateussantanasilva/Fatec-Eventos/blob/main/.github/front-cover.png?raw=true"
-                            alt="" class="work_img">
-
-                        <h3 class="work_name">Fatec Eventos</h3>
-                        <p class="work_description">
-                            Projeto que permite fácil divulgação e gerenciamento de eventos realizados em cada Fatec.
-                        </p>
-
-                        <div class="work_buttons">
-                            <a download="Mateus_CV" href="https://mateussantanasilva.github.io/Fatec-Eventos/"
-                                target="_blank" class="button button--ghost">
-                                <i class='bx bx-globe work_buttons-icon'></i>
-                                Site
-                            </a>
-                            <a href="https://github.com/mateussantanasilva/Fatec-Eventos" target="_blank"
-                                class="button">
-                                <i class='bx bxl-github work_buttons-icon'></i>
-                                Repositório
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="work_card swiper-slide">
-                        <img src="https://github.com/mateussantanasilva/RocketQ/blob/main/.github/front-cover.png?raw=true"
-                            alt="" class="work_img">
-
-                        <h3 class="work_name">RocketQ</h3>
-                        <p class="work_description">
-                            Projeto para as pessoas interagirem com perguntas através de salas, podendo o criador
-                            gerenciá-las.
-                        </p>
-
-                        <div class="work_buttons">
-                            <a download="Mateus_CV" href="https://rocket-questions.herokuapp.com/" target="_blank"
-                                class="button button--ghost">
-                                <i class='bx bx-globe work_buttons-icon'></i>
-                                Site
-                            </a>
-                            <a href="https://github.com/mateussantanasilva/RocketQ" target="_blank" class="button">
-                                <i class='bx bxl-github work_buttons-icon'></i>
-                                Repositório
-                            </a>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
 
                 <div class="swiper-pagination"></div>
