@@ -13,7 +13,7 @@ export class SendEmailController {
         const contentEmail: TContentEmail = req.body
 
         const mailer = new Mailer()
-        const resultMailer = await mailer.execute(contentEmail)
+        await mailer.execute(contentEmail)
 
         return res.redirect('/')
     }
