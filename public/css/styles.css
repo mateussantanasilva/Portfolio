@@ -334,7 +334,7 @@ body.light-theme {
 }
 
 .home_img {
-  width: 160px;
+  width: 178px;
 }
 
 .home_handle {
@@ -349,7 +349,7 @@ body.light-theme {
   background: linear-gradient(180deg,
       hsla(var(--first-hue), var(--sat), var(--lig), 1),
       hsla(var(--first-hue), var(--sat), var(--lig), .2));
-  border-radius: 10rem 10rem 1rem 1rem;
+  border-radius: 2rem 2rem 1rem 1rem;
 }
 
 .home_buttons {
@@ -988,11 +988,11 @@ body.light-theme {
 
   .home_handle {
     width: 150px;
-    height: 253px;
+    height: 232px;
   }
 
   .home_img {
-    width: 130px;
+    width: 142px;
   }
 
   .about_info {
@@ -1112,7 +1112,7 @@ body.light-theme {
   }
 
   .home_img {
-    width: 220px;
+    width: 254px;
   }
 
   .home_social-link {
