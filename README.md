@@ -3,7 +3,7 @@
 Site pessoal utilizado para listar e apresentar informações necessárias sobre mim, dentre elas estão as tecnologias que possuo alguma habilidade, o que posso oferecer, meus projetos para serem consultados e muito mais.
 
 <div align="center">
-    <img src="./.github/front-cover.png" width="90%" />
+    <img src="./.github/front-cover.webp" width="90%" />
 </div>
 
 ## 🚀 Tecnologias
