@@ -10,16 +10,15 @@
         Green: hsl(150, 66%, 65%)
         Brown: hsl(16, 18%, 72%)
         Orange: hsl(14, 100%, 70%)
-
+        Blue profile: hsl(222, 85%, 45%)
   */
-  --first-hue: 250;
-  --sat: 66%;
-  --lig: 75%;
+  --first-hue: 207;
+  --sat: 90%;
+  --lig: 72%;
   /*change --first-color-alt*/
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
-  /* -4% lig, example: 75 - 4 = 71*/
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% lig, example: 75 - 4 = 71*/
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -335,6 +334,7 @@ body.light-theme {
 
 .home_img {
   width: 178px;
+  filter: drop-shadow(5px 5px 5px hsla(0, 0%, 0%, .2));
 }
 
 .home_handle {
@@ -347,9 +347,10 @@ body.light-theme {
   width: 190px;
   height: 293px;
   background: linear-gradient(180deg,
-      hsla(var(--first-hue), var(--sat), var(--lig), 1),
+      hsla(var(--first-hue), var(--sat), var(--lig), .7),
       hsla(var(--first-hue), var(--sat), var(--lig), .2));
   border-radius: 2rem 2rem 1rem 1rem;
+  filter: brightness(.8);
 }
 
 .home_buttons {
