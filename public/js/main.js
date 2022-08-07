@@ -166,6 +166,7 @@ $(document).ready((event) => {
     $(formContact).submit((event) => {
         event.preventDefault()
         spinnerLoading.classList.add('active-loading')
+        document.body.classList.add('modal-active-body')
 
         const name = $('#input-name').val()
         const email = $('#input-email').val()
@@ -177,7 +178,6 @@ $(document).ready((event) => {
             data: { name: name, email: email, message: message },
             success: () => {
                 spinnerLoading.classList.remove('active-loading')
-                document.body.classList.add('modal-active-body')
                 modalContact.classList.add('active-modal')
 
                 $('#input-name').val('')
