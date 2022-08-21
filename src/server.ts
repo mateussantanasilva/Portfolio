@@ -6,7 +6,7 @@ import { router } from './routes'
 const app = express()
 
 app.set('view engine', 'ejs')
-//Em desenvolvimento altere o caminho para 'views'
+//Em desenvolvimento altere o caminho para 'views', em prod ../src/views
 app.set('views', path.join(__dirname, '../src/views'))
 app.use(express.static('public'))
 
