@@ -25,7 +25,7 @@ export class GenerateInitialDataProjectsService {
             })
             .then(response => {
                 const resultRepositories = response.data
-
+                
                 // Criando um array de objetos com cada projeto
                 for (let i = 0; i < resultRepositories.length; i++) {
                     projects.push({
