@@ -18,7 +18,8 @@
   /*change --first-color-alt*/
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% lig, example: 75 - 4 = 71*/
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 68%);
+  /* -4% lig, example: 75 - 4 = 71*/
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -507,11 +508,16 @@ body.light-theme {
 }
 
 .skills_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   color: var(--first-color);
   text-align: center;
 
+  min-height: 3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -523,7 +529,6 @@ body.light-theme {
 
 .skills_group {
   display: grid;
-  align-content: flex-start;
   row-gap: 1rem;
 }
 
