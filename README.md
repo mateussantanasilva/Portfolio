@@ -19,7 +19,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Acesse o projeto online
 
-- https://mateus-santana.herokuapp.com/
+- https://mateussantana.up.railway.app/
 
 ## 💻 Acesse o projeto local
 
