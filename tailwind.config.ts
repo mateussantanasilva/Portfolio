@@ -21,6 +21,7 @@ const config: Config = {
 
       backgroundColor: {
         overlay: 'hsla(219, 28%, 16%, .7)',
+        nav: 'hsla(219, 32%, 16%, .8)',
       },
 
       backgroundImage: {
@@ -30,6 +31,14 @@ const config: Config = {
 
       gridTemplateColumns: {
         badges: 'repeat(3, 140px)',
+      },
+
+      width: {
+        '9/10': '90%',
+      },
+
+      borderRadius: {
+        '4xl': '4rem',
       },
     },
   },

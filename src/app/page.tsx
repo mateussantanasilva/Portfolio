@@ -1,11 +1,13 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Linkedin, Moon } from 'lucide-react'
 import { About } from '@/components/sections/about'
 import { Hero } from '@/components/sections/hero'
 import { Services } from '@/components/sections/services'
 import { Skills } from '@/components/sections/skills'
 import { Contact } from '@/components/sections/contact'
-import Image from 'next/image'
+import { Navigation } from '@/components/sections/navigation'
+import { Works } from '@/components/sections/works'
 
 import GithubIcon from '@/assets/brand-icons/github.svg'
 import InstagramIcon from '@/assets/brand-icons/instagram.svg'
@@ -13,12 +15,14 @@ import InstagramIcon from '@/assets/brand-icons/instagram.svg'
 export default function Home() {
   return (
     <>
-      <header className="mx-4 flex h-14 items-center justify-between">
+      <header className="z-10 mx-4 flex h-14 items-center justify-between">
         <Link href="/" className="text-base font-medium text-slate-500">
           Mateus
         </Link>
 
         <Moon className="size-6 text-slate-200" />
+
+        <Navigation />
       </header>
 
       <main className="mx-4 mb-20 mt-12 space-y-20">
@@ -29,6 +33,8 @@ export default function Home() {
         <Skills />
 
         <Services />
+
+        <Works />
 
         <Contact />
       </main>

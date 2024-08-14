@@ -23,9 +23,9 @@ export function ServicesCard({
         </Dialog.Trigger>
 
         <Dialog.Portal>
-          <Dialog.Overlay className="bg-overlay fixed inset-0 h-screen w-screen" />
+          <Dialog.Overlay className="fixed inset-0 z-20 h-screen w-screen bg-overlay" />
 
-          <Dialog.Content className="fixed top-1/2 mx-4 -translate-y-1/2 rounded-3xl bg-slate-900 px-5 pb-10 pt-16">
+          <Dialog.Content className="fixed top-1/2 z-30 mx-4 -translate-y-1/2 rounded-3xl bg-slate-900 px-5 pb-10 pt-16">
             <Dialog.Close className="absolute right-6 top-6">
               <X className="size-6 text-slate-500" />
             </Dialog.Close>
