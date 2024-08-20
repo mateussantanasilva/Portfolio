@@ -14,25 +14,36 @@ import DefaultImg from '@/assets/default-front-cover.webp'
 export function Works() {
   return (
     <section>
-      <header className="mb-10 flex flex-col items-center">
-        <span className="text-xs text-slate-300">Meu portfólio</span>
-        <h2 className="text-xl font-semibold text-slate-500">
+      <header className="mb-10 flex flex-col items-center lg:mb-14">
+        <span className="text-xs text-slate-400 dark:text-slate-300 lg:text-sm">
+          Meu portfólio
+        </span>
+        <h2 className="text-xl font-semibold text-slate-500 lg:text-2xl">
           Trabalhos Recentes
         </h2>
       </header>
 
       <Swiper
         modules={[Pagination]}
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={24}
         loop
+        grabCursor
         pagination={{ clickable: true }}
+        breakpoints={{
+          560: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+          },
+        }}
         className="cursor-grab"
       >
-        {Array.from({ length: 5 }).map((item, index) => (
+        {Array.from({ length: 5 }).map((_, index) => (
           <SwiperSlide
             key={index}
-            className="mb-12 rounded-3xl bg-slate-700 px-6 py-5"
+            className="mb-12 max-w-slide rounded-3xl bg-white px-6 py-5 shadow-md dark:bg-slate-700 dark:shadow-none lg:px-8 lg:py-6"
           >
             <Image
               src={DefaultImg}
@@ -41,12 +52,12 @@ export function Works() {
             />
 
             <h3 className="mb-1 truncate font-medium">SavPets</h3>
-            <p className="text-sm text-slate-200">
+            <p className="text-sm text-slate-400 dark:text-slate-200">
               Plataforma de recomendações para leitores, um lugar onde eles
               possam avaliar e ver avaliações.
             </p>
 
-            <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
               <Button title="Site" variant="outline" size="sm" icon={Globe} />
               <Button title="Repositório" size="sm" icon={Code} />
             </div>
