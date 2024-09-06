@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import { Moon, Sun } from 'lucide-react'
 import { Navigation } from '@/components/sections/navigation'
 import { useTheme } from 'next-themes'
+import { scrollToSection } from '@/utils/scroll-to-section'
 
 export function Header() {
   const [isClient, setIsClient] = useState(false)
@@ -33,12 +33,12 @@ export function Header() {
       className={`fixed left-0 right-0 top-0 z-10 bg-slate-50 dark:bg-slate-900 ${scrollY > 0 && 'shadow-md dark:shadow-md2'}`}
     >
       <div className="mx-auto flex h-14 max-w-container items-center justify-between px-4">
-        <Link
-          href="#hero"
+        <button
+          onClick={() => scrollToSection('hero')}
           className="text-base font-medium text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
         >
           Mateus
-        </Link>
+        </button>
 
         {isClient && (
           <button onClick={handleChangeTheme}>
