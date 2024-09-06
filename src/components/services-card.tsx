@@ -17,7 +17,7 @@ export function ServicesCard({
       <h3 className="max-w-48 font-semibold lg:text-xl">{title}</h3>
 
       <Dialog.Root>
-        <Dialog.Trigger className="flex items-center gap-1 text-sm text-slate-500">
+        <Dialog.Trigger className="flex items-center gap-1 text-sm text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125">
           Ver mais
           <ArrowRight className="size-4 shrink-0" />
         </Dialog.Trigger>
@@ -27,7 +27,7 @@ export function ServicesCard({
 
           <Dialog.Content className="fixed left-4 right-4 top-1/2 z-30 mx-auto max-w-lg -translate-y-1/2 rounded-3xl bg-slate-50 px-5 pb-10 pt-20 dark:bg-slate-900 md:px-10">
             <Dialog.Close className="absolute right-6 top-6">
-              <X className="size-6 text-slate-500" />
+              <X className="size-6 text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125" />
             </Dialog.Close>
 
             <Dialog.Title className="mb-4 text-center font-semibold text-slate-500 lg:text-xl">

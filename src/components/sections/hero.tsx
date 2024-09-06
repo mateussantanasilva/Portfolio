@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../button'
@@ -21,9 +23,14 @@ export function Hero() {
       </header>
 
       <div className="mb-16 flex flex-col items-center justify-center gap-6 xs:flex-row">
-        <Button title="Baixar CV" variant="outline" />
+        <Button
+          href="/CV_MateusSantana.pdf"
+          download="CV_MateusSantana"
+          title="Baixar CV"
+          variant="outline"
+        />
 
-        <Button title="Sobre mim" />
+        <Button href="#about" title="Sobre mim" />
       </div>
 
       <div className="mx-auto flex h-60 w-40 items-end justify-center rounded-b-2xl rounded-t-3xl bg-profile xs:h-72 xs:w-48 lg:h-96 lg:w-72">
@@ -31,6 +38,7 @@ export function Hero() {
           src={ProfileImg}
           alt="Foto de perfil do Mateus"
           width={424}
+          priority
           className="w-36 drop-shadow-2xl dark:brightness-90 xs:w-44 lg:w-60"
         />
       </div>
@@ -38,7 +46,8 @@ export function Hero() {
       <div className="absolute bottom-6 left-0 flex w-fit flex-col items-center gap-2 after:h-8 after:w-0.5 after:bg-slate-500">
         <Link
           href="https://www.linkedin.com/in/mateus-santana-silva/"
-          className="rounded bg-white p-1 shadow-md dark:bg-slate-700 dark:shadow-none lg:p-1.5"
+          target="_blank"
+          className="rounded bg-white p-1 shadow-md transition-all hover:brightness-95 dark:bg-slate-700 dark:shadow-none dark:hover:brightness-200 lg:p-1.5"
         >
           <Linkedin
             aria-label="Ícone do linkedin em link para ver perfil"
@@ -48,7 +57,8 @@ export function Hero() {
 
         <Link
           href="https://github.com/mateussantanasilva"
-          className="rounded bg-white p-1 shadow-md dark:bg-slate-700 dark:shadow-none lg:p-1.5"
+          target="_blank"
+          className="rounded bg-white p-1 shadow-md transition-all hover:brightness-95 dark:bg-slate-700 dark:shadow-none dark:hover:brightness-200 lg:p-1.5"
         >
           <Image
             src={GithubIcon}
@@ -59,7 +69,8 @@ export function Hero() {
 
         <Link
           href="mailto:santanasilva1778@gmail.com"
-          className="rounded bg-white p-1 shadow-md dark:bg-slate-700 dark:shadow-none lg:p-1.5"
+          target="_blank"
+          className="rounded bg-white p-1 shadow-md transition-all hover:brightness-95 dark:bg-slate-700 dark:shadow-none dark:hover:brightness-200 lg:p-1.5"
         >
           <Image
             src={GmailIcon}
@@ -70,8 +81,8 @@ export function Hero() {
       </div>
 
       <Link
-        href=""
-        className="absolute -right-9 bottom-16 flex -rotate-90 items-center gap-2 text-slate-500"
+        href="#about"
+        className="absolute -right-9 bottom-16 flex -rotate-90 items-center gap-2 text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
       >
         <span className="text-xs lg:text-sm">Ver Portfólio</span>
         <Mouse className="size-3.5 rotate-90 lg:size-4" />

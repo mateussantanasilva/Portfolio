@@ -8,11 +8,19 @@ import { Skills } from '@/components/sections/skills'
 import { Contact } from '@/components/sections/contact'
 import { Works } from '@/components/sections/works'
 import { Linkedin } from 'lucide-react'
+import { filterRepositories } from '@/utils/filter-repositories'
 
 import GithubIcon from '@/assets/brand-icons/github.svg'
 import InstagramIcon from '@/assets/brand-icons/instagram.svg'
 
-export default function Home() {
+export default async function Home() {
+  const data = await fetch(
+    'https://api.github.com/users/mateussantanasilva/repos',
+  )
+  const repos = await data.json()
+
+  const projects = filterRepositories(repos)
+
   return (
     <>
       <Header />
@@ -20,13 +28,13 @@ export default function Home() {
       <main className="mx-auto mb-20 mt-26 max-w-container space-y-20 px-4">
         <Hero />
 
-        <About />
+        <About projectsNumber={projects.length} />
 
         <Skills />
 
         <Services />
 
-        <Works />
+        <Works projects={projects} />
 
         <Contact />
       </main>
@@ -35,14 +43,25 @@ export default function Home() {
         <strong className="text-3xl font-semibold">Mateus</strong>
 
         <div className="my-8 flex justify-center gap-5">
-          <Link href="">Habilidades</Link>
-          <Link href="">Projetos</Link>
+          <Link
+            href=""
+            className="underline-offset-8 transition-all hover:underline hover:brightness-95 dark:hover:brightness-200"
+          >
+            Habilidades
+          </Link>
+          <Link
+            href=""
+            className="underline-offset-8 transition-all hover:underline hover:brightness-95 dark:hover:brightness-200"
+          >
+            Projetos
+          </Link>
         </div>
 
         <div className="mb-16 flex justify-center gap-5">
           <Link
             href="https://github.com/mateussantanasilva"
-            className="rounded-lg bg-white p-1 dark:bg-slate-900 lg:p-1.5"
+            target="_blank"
+            className="rounded-lg bg-white p-1 transition-all hover:brightness-95 dark:bg-slate-900 dark:hover:brightness-200 lg:p-1.5"
           >
             <Image
               src={GithubIcon}
@@ -53,7 +72,8 @@ export default function Home() {
 
           <Link
             href="https://www.instagram.com/santana__mss/"
-            className="rounded-lg bg-white p-1 dark:bg-slate-900 lg:p-1.5"
+            target="_blank"
+            className="rounded-lg bg-white p-1 transition-all hover:brightness-95 dark:bg-slate-900 dark:hover:brightness-200 lg:p-1.5"
           >
             <Image
               src={InstagramIcon}
@@ -64,7 +84,8 @@ export default function Home() {
 
           <Link
             href="https://www.linkedin.com/in/mateus-santana-silva/"
-            className="rounded-lg bg-white p-1 dark:bg-slate-900 lg:p-1.5"
+            target="_blank"
+            className="rounded-lg bg-white p-1 transition-all hover:brightness-95 dark:bg-slate-900 dark:hover:brightness-200 lg:p-1.5"
           >
             <Linkedin
               aria-label="Ícone do linkedin em link para ver perfil"

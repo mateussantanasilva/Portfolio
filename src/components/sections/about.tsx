@@ -4,7 +4,11 @@ import { Button } from '../button'
 
 import AboutImg from '@/assets/about.webp'
 
-export function About() {
+interface AboutProps {
+  projectsNumber: number
+}
+
+export async function About({ projectsNumber }: AboutProps) {
   return (
     <section>
       <header className="mb-10 flex flex-col items-center lg:mb-14">
@@ -38,7 +42,7 @@ export function About() {
               <Briefcase className="size-6 text-slate-500" />
               <h3 className="mb-1.5 mt-2 text-sm font-semibold">Concluído</h3>
               <span className="text-center text-xs leading-loose text-slate-400 dark:text-slate-200">
-                + 8 <br /> projetos
+                + {projectsNumber} <br /> projetos
               </span>
             </div>
 
@@ -58,7 +62,9 @@ export function About() {
             conhecimento atual.
           </p>
 
-          <Button title="Contate-me" className="mx-auto lg:mx-0" />
+          <div className="mx-auto w-fit lg:mx-0">
+            <Button href="#contact" title="Contate-me" />
+          </div>
         </div>
       </div>
     </section>

@@ -38,7 +38,7 @@ export function Contact() {
           <Link
             href="mailto:santanasilva1778@gmail.com"
             target="_blank"
-            className="flex items-center gap-1 text-sm text-slate-500"
+            className="flex items-center gap-1 text-sm text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
           >
             Escreva-me
             <ArrowRight className="size-4" />
@@ -63,7 +63,7 @@ export function Contact() {
           <Link
             href="https://wa.me/5511943464488?text=Ol%C3%A1%2C+vim+pelo+seu+portf%C3%B3lio."
             target="_blank"
-            className="flex items-center gap-1 text-sm text-slate-500"
+            className="flex items-center gap-1 text-sm text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
           >
             Escreva-me
             <ArrowRight className="size-4" />
@@ -79,7 +79,7 @@ export function Contact() {
           <Link
             href="https://www.google.com/maps/place/S%C3%A3o+Paulo,+SP/@-23.6815315,-46.875497,10z/data=!3m1!4b1!4m5!3m4!1s0x94ce448183a461d1:0x9ba94b08ff335bae!8m2!3d-23.5557714!4d-46.6395571"
             target="_blank"
-            className="flex items-center gap-1 text-sm text-slate-500"
+            className="flex items-center gap-1 text-sm text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
           >
             Localize-me
             <ArrowRight className="size-4" />

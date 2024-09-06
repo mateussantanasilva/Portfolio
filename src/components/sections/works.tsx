@@ -1,17 +1,20 @@
 'use client'
 
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import { Button } from '../button'
 import { Code, Globe } from 'lucide-react'
+import { Repository } from '@/utils/filter-repositories'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { ThumbnailFallback } from '../thumbnail-fallback'
 
-import DefaultImg from '@/assets/default-front-cover.webp'
+interface WorksProps {
+  projects: Repository[]
+}
 
-export function Works() {
+export function Works({ projects }: WorksProps) {
   return (
     <section>
       <header className="mb-10 flex flex-col items-center lg:mb-14">
@@ -26,43 +29,62 @@ export function Works() {
       <Swiper
         modules={[Pagination]}
         spaceBetween={24}
-        loop
+        slidesPerView={1}
         grabCursor
         pagination={{ clickable: true }}
+        loop
         breakpoints={{
-          560: {
+          520: {
             slidesPerView: 2,
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
+          820: {
+            slidesPerView: 3,
           },
         }}
         className="cursor-grab"
       >
-        {Array.from({ length: 5 }).map((_, index) => (
-          <SwiperSlide
-            key={index}
-            className="mb-12 max-w-slide rounded-3xl bg-white px-6 py-5 shadow-md dark:bg-slate-700 dark:shadow-none lg:px-8 lg:py-6"
-          >
-            <Image
-              src={DefaultImg}
-              alt="Capa de projeto em desenvolvimento"
-              className="mb-4 w-full rounded-3xl"
-            />
+        <div className="max-w-3xl">
+          {projects.map((project) => (
+            <SwiperSlide
+              key={project.name}
+              className="mb-12 flex flex-col rounded-3xl bg-white px-6 py-5 shadow-md dark:bg-slate-700 dark:shadow-none lg:px-8 lg:py-6"
+            >
+              <ThumbnailFallback
+                src={project.image_url}
+                alt={`Capa de projeto ${project.name}`}
+                width={450}
+                height={320}
+                className="mb-4 w-full rounded-3xl"
+              />
 
-            <h3 className="mb-1 truncate font-medium">SavPets</h3>
-            <p className="text-sm text-slate-400 dark:text-slate-200">
-              Plataforma de recomendações para leitores, um lugar onde eles
-              possam avaliar e ver avaliações.
-            </p>
+              <h3 className="mb-1 truncate font-medium">{project.name}</h3>
+              <p className="line-clamp-4 min-h-20 text-sm text-slate-400 dark:text-slate-200">
+                {project.description}
+              </p>
 
-            <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
-              <Button title="Site" variant="outline" size="sm" icon={Globe} />
-              <Button title="Repositório" size="sm" icon={Code} />
-            </div>
-          </SwiperSlide>
-        ))}
+              <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
+                {project.homepage && (
+                  <Button
+                    href={project.homepage}
+                    target="_blank"
+                    title="Site"
+                    variant="outline"
+                    size="sm"
+                    icon={Globe}
+                  />
+                )}
+
+                <Button
+                  href={project.html_url}
+                  target="_blank"
+                  title="Repositório"
+                  size="sm"
+                  icon={Code}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </div>
       </Swiper>
     </section>
   )

@@ -2,37 +2,37 @@ export const SERVICES = [
   {
     title: 'Desenvolvimento Frontend',
     description:
-      'Focando sempre em designs mais modernos, na melhor experiência e desempenho que o usuário pode ter.',
+      'Criação de interfaces modernas e responsivas, assegurando uma excelente experiência do usuário.',
     services: [
-      'Desenvolvimento de sistemas web.',
-      'Adaptação para diferentes tamanhos de tela.',
-      'Criação de aplicações baseadas em padrões de navegação.',
-      'Testes e validação de acessibilidade na interface.',
-      'Melhorias para alta performace.',
+      'Construção de interfaces com tecnologias modernas.',
+      'Implementação de design patterns para manter o código limpo.',
+      'Adaptação e otimização para diferentes dispositivos.',
+      'Testes automatizados para garantir a qualidade do frontend.',
+      'Otimização para melhor desempenho e acessibilidade.',
     ],
   },
   {
     title: 'Desenvolvimento Backend',
     description:
-      'Prezando pelo controle e desempenho das requisições, buscando maneiras de melhorar a velocidade e segurança.',
+      'Construção de soluções altamente eficientes, com ênfase em segurança, performance e escalabilidade.',
     services: [
-      'Integração com banco de dados.',
-      'Boa estruturação de código para manutenção.',
-      'Realização de testes para melhor execução.',
-      'Implantação de autenticação e utilização de APIs.',
-      'Integração padronizada em equipes.',
+      'Desenvolvimento de APIs modernas',
+      'Aplicação dos princípios SOLID para código escalável.',
+      'Utilização de TDD para garantir a funcionalidade do backend.',
+      'Integração eficiente com bancos de dados SQL e NoSQL.',
+      'Implementação de autenticação segura e controle de acesso.',
     ],
   },
   {
     title: 'Desenvolvimento Mobile',
     description:
-      'Garantindo uma experiência fluida e eficiente em dispositivos móveis, com foco em performance e usabilidade.',
+      'Elaboração de aplicativos móveis eficientes, focando em uma experiência fluida, otimizada e integrada.',
     services: [
-      'Desenvolvimento de aplicativos híbridos com React Native.',
-      'Adaptação para diferentes sistemas operacionais (iOS e Android).',
-      'Integração com funcionalidades do dispositivo (GPS, câmera, etc.).',
-      'Testes de usabilidade e performance em dispositivos móveis.',
-      'Otimização para consumo eficiente de recursos.',
+      'Desenvolvimento de apps híbridos com React Native e Expo.',
+      'Aplicação de design patterns para melhor estrutura.',
+      'Testes de usabilidade e performance nos aplicativos.',
+      'Integração com APIs e funcionalidades nativas do dispositivo.',
+      'Otimização de recursos e responsividade.',
     ],
   },
 ]

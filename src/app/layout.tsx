@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ptBR" suppressHydrationWarning>
       <body
-        className={`antialiased ${poppins.className} bg-slate-50 text-slate-600 dark:bg-slate-900 dark:text-slate-100`}
+        className={`antialiased ${poppins.className} bg-slate-50 text-slate-600 transition-colors dark:bg-slate-900 dark:text-slate-100`}
       >
         <ThemeProvider
           attribute="class"
