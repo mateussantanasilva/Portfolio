@@ -10,16 +10,16 @@ Site pessoal utilizado para listar e apresentar informações necessárias sobre
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML
-- CSS
-- [TypeScript](https://www.typescriptlang.org/)
-- [NodeJS](https://nodejs.org/en/)
-- [EJS](https://ejs.co)
-- [Express](https://www.npmjs.com/package/express)
+- Next.js
+- TypeScript
+- TailwindCSS
+- Framer Motion
+- RadixUI
+- Swiper
 
 ## 💻 Acesse o projeto online
 
-- [https://mateussantana.onrender.com/](https://mateussantana.onrender.com/)
+- [https://mateus-santana.vercel.app/](https://mateus-santana.vercel.app/)
 
 ## 💻 Acesse o projeto local
 
@@ -39,19 +39,6 @@ $ cd Portfolio/
 # Instale as dependências
 $ npm install
 
-# Altere o caminho das views
-# no arquivo server.ts, altere a chamada views '../src/views' para 'views'
-
 # Execute o projeto
 $ npm run dev
-
-# O servidor será inicializado e poderá ser acessado por: <http://localhost:3000>
-# Caso a porta esteja ocupada, vá até src/server.ts e altere a porta para uma livre.
 ```
-#### Variáveis locais
-No arquivo .env, será necessário possuir as seguintes informações:
-- CLIENT_ID
-- SECRET_KEY
-- REFRESH_TOKEN
-- USER_AGENT
-- TOKEN_USER_GITHUB
