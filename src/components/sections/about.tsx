@@ -63,8 +63,8 @@ export function About({ projectsNumber }: AboutProps) {
             </div>
 
             <p className="my-8 text-center text-slate-400 dark:text-slate-200 sm:px-20 lg:px-0 lg:text-start">
-              Desenvolvedor full stack, graduando em desenvolvimento de software
-              multiplataforma, com objetivo de construir aplicações completas
+              Desenvolvedor full stack, formado em Desenvolvimento de Software
+              Multiplataforma, com objetivo de construir aplicações completas
               com persistência de dados, buscando sempre aprimorar o nível de
               conhecimento atual.
             </p>
