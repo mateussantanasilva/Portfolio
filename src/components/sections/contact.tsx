@@ -64,10 +64,10 @@ export function Contact() {
 
             <h3 className="mt-2 max-w-48 text-sm font-semibold">WhatsApp</h3>
             <span className="mb-3 truncate text-center text-sm text-slate-400 dark:text-slate-200">
-              (11)94346-4488
+              (11)93217-8035
             </span>
             <Link
-              href="https://wa.me/5511943464488?text=Ol%C3%A1%2C+vim+pelo+seu+portf%C3%B3lio."
+              href="https://wa.me/5511932178035?text=Ol%C3%A1%2C+vim+pelo+seu+portf%C3%B3lio."
               target="_blank"
               className="flex items-center gap-1 text-sm text-slate-500 transition-all hover:brightness-110 dark:hover:brightness-125"
             >
